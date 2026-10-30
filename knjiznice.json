@@ -1,0 +1,149 @@
+[
+    {
+        "id": 5,
+        "naziv": "Gradska knjižnica Krk",
+        "grad": "Krk",
+        "zupanija": "Primorsko-goranska županija",
+        "odjeli": null
+    },
+    {
+        "id": 6,
+        "naziv": "Gradska knjižnica Dugo Selo",
+        "grad": "Dugo Selo",
+        "zupanija": "Zagrebačka županija",
+        "odjeli": null
+    },
+    {
+        "id": 1,
+        "naziv": "Gradska knjižnica \\"Franjo Marković\\" Križevci - Bibliobus",
+        "grad": "Križevci",
+        "zupanija": "Koprivničko-križevačka županija",
+        "odjeli": null
+    },
+    {
+        "id": 2,
+        "naziv": "Dubrovačke knjižnice Dubrovnik - Narodna knjižnica Grad",
+        "grad": "Dubrovnik",
+        "zupanija": "Dubrovačko-neretvanska županija",
+        "odjeli": [
+            {
+                "id": 1,
+                "naziv": "Odjel posudbe",
+                "zaposlenici": null
+            },
+            {
+                "id": 2,
+                "naziv": "Odjel za djecu i mlade",
+                "zaposlenici": null
+            },
+            {
+                "id": 3,
+                "naziv": "Čitaonica",
+                "zaposlenici": null
+            },
+            {
+                "id": 4,
+                "naziv": "Odjel nabave",
+                "zaposlenici": null
+            },
+            {
+                "id": 5,
+                "naziv": "Odjel obrade građe",
+                "zaposlenici": null
+            },
+            {
+                "id": 6,
+                "naziv": "Matična služba",
+                "zaposlenici": null
+            },
+            {
+                "id": 7,
+                "naziv": "Informacijska služba",
+                "zaposlenici": null
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "naziv": "Knjižnice grada Zagreba",
+        "grad": "Zagreb",
+        "zupanija": "Grad Zagreb",
+        "odjeli": null
+    },
+    {
+        "id": 7,
+        "naziv": "Gradska knjižnica Zadar - Bibliobus",
+        "grad": "Zadar",
+        "zupanija": "Zadarska županija",
+        "odjeli": null
+    },
+    {
+        "id": 8,
+        "naziv": "Gradska knjižnica Bakar",
+        "grad": "Bakar",
+        "zupanija": "Primorsko-goranska županija",
+        "odjeli": null
+    },
+    {
+        "id": 9,
+        "naziv": "Gradska sveučilišna knjižnica Osijek",
+        "grad": "Osijek",
+        "zupanija": "Osječko-baranjska županija",
+        "odjeli": null
+    },
+    {
+        "id": 10,
+        "naziv": "Narodna knjižnica \\"Petar Preradović\\" Bjelovar - Bibliobus",
+        "grad": "Bjelovar",
+        "zupanija": "Bjelovarsko-bilogorska županija",
+        "odjeli": [
+            {
+                "id": 8,
+                "naziv": "Dječji odjel i Igraonica",
+                "zaposlenici": null
+            },
+            {
+                "id": 9,
+                "naziv": "Odjel za odrasle",
+                "zaposlenici": null
+            },
+            {
+                "id": 10,
+                "naziv": "Studijski odjel",
+                "zaposlenici": null
+            },
+            {
+                "id": 11,
+                "naziv": "Čitaonica tiska",
+                "zaposlenici": null
+            },
+            {
+                "id": 12,
+                "naziv": "Bibliobusna služba",
+                "zaposlenici": null
+            },
+            {
+                "id": 13,
+                "naziv": "Županijska matična služba",
+                "zaposlenici": [
+                    {
+                        "ime": "Neda",
+                        "prezime": "Adamović"
+                    }
+                ]
+            },
+            {
+                "id": 14,
+                "naziv": "Služba nabave i obrade",
+                "zaposlenici": null
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "naziv": "Knjižnica i čitaonica \\"Fran Galović\\" Koprivnica - Bibliobus",
+        "grad": "Koprivnica",
+        "zupanija": "Koprivničko-križevačka županija",
+        "odjeli": null
+    }
+]
