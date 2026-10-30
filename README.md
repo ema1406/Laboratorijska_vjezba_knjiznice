@@ -1,4 +1,9 @@
-# Javne knjižnice u Hrvatskoj
+# README.md
+
+## Opis skupa podataka
+Ovaj skup podataka sadrži informacije o odabranim javnim knjižnicama na području Republike Hrvatske. Podaci obuhvaćaju osnovne informacije o knjižnicama, njihovim odjelima i zaposlenicima.
+
+## Metapodaci
 
 ## Opis licencija
 Licencija: Creative Commons Imenovanje 4.0 međunarodna (CC BY 4.0).
@@ -12,14 +17,11 @@ Autor: Ema Pavić
 ## Verzija skupa
 Verzija: 1.0
 
-## 5. Jezik
+## Jezik
 Hrvatski jezik
 
-## 6. Područje
+## Područje
 Republika Hrvatska
-
-## Opis skupa podataka
-Ovaj skup podataka sadrži informacije o odabranim javnim knjižnicama na području Republike Hrvatske. Podaci obuhvaćaju osnovne informacije o knjižnicama, njihovim odjelima i zaposlenicima.
 
 ## Izvor podataka
 Podaci su prikupljeni iz javno dostupnih informacija o knjižnicama i njihovim mrežnim stranicama.
