@@ -1,42 +1,5 @@
 [
     {
-        "id": 1,
-        "naziv": "Gradska knjižnica 'Franjo Marković' Križevci - Bibliobus",
-        "adresa": "Florijanski trg 14",
-        "postanski_broj": "48260",
-        "grad": "Križevci",
-        "zupanija": "Koprivničko-križevačka županija",
-        "telefon": "0911720987",
-        "mail": "bibliobus@knjiznica-krizevci.hr",
-        "web": "https://www.knjiznica-krizevci.hr/",
-        "vrsta_knjiznice": "Bibliobusna",
-        "odjeli": [
-            {
-                "odjel_id": 19,
-                "odjel_naziv": "Odjel beletristike"
-            },
-            {
-                "odjel_id": 20,
-                "odjel_naziv": "Kutić za mlade"
-            }
-        ],
-        "zaposlenici": [
-            {
-                "ime": "Igor",
-                "prezime": "Kuzmić",
-                "radni_odnos": "Knjižničar",
-                "zaposlenik_id": 20
-            },
-            {
-                "ime": "Marina",
-                "prezime": "Vidović Krušić",
-                "radni_odnos": "Ravnateljica",
-                "zaposlenik_id": 19
-            }
-        ]
-    },
-    {
-        "id": 2,
         "naziv": "Dubrovačke knjižnice Dubrovnik - Narodna knjižnica Grad",
         "adresa": "Ulica od Puća 6",
         "postanski_broj": "20000",
@@ -48,149 +11,61 @@
         "vrsta_knjiznice": "Narodna",
         "odjeli": [
             {
-                "odjel_id": 1,
                 "odjel_naziv": "Odjel posudbe"
             },
             {
-                "odjel_id": 2,
                 "odjel_naziv": "Odjel za djecu i mlade"
             },
             {
-                "odjel_id": 3,
                 "odjel_naziv": "Čitaonica"
             },
             {
-                "odjel_id": 4,
                 "odjel_naziv": "Odjel nabave"
             },
             {
-                "odjel_id": 5,
                 "odjel_naziv": "Odjel obrade građe"
             },
             {
-                "odjel_id": 6,
                 "odjel_naziv": "Matična služba"
             },
             {
-                "odjel_id": 7,
                 "odjel_naziv": "Informacijska služba"
             }
         ],
         "zaposlenici": []
     },
     {
-        "id": 3,
-        "naziv": "Knjižnica i čitaonica 'Fran Galović' Koprivnica - Bibliobus",
-        "adresa": "Zrinski trg 6",
-        "postanski_broj": "48000",
-        "grad": "Koprivnica",
+        "naziv": "Gradska knjižnica 'Franjo Marković' Križevci - Bibliobus",
+        "adresa": "Florijanski trg 14",
+        "postanski_broj": "48260",
+        "grad": "Križevci",
         "zupanija": "Koprivničko-križevačka županija",
-        "telefon": "048-622363",
-        "mail": "odrasli@knjiznica-koprivnica.hr",
-        "web": "https://www.knjiznica-koprivnica.hr/",
-        "vrsta_knjiznice": "Bibliobusna",
-        "odjeli": [],
-        "zaposlenici": [
-            {
-                "ime": "Danijela",
-                "prezime": "Petrić",
-                "radni_odnos": "Voditeljica odjela",
-                "zaposlenik_id": 14
-            },
-            {
-                "ime": "Jasminka",
-                "prezime": "Vajzović",
-                "radni_odnos": "Viša knjižničarka",
-                "zaposlenik_id": 15
-            },
-            {
-                "ime": "Marija",
-                "prezime": "Vugrinec",
-                "radni_odnos": "Diplomirani informatičar",
-                "zaposlenik_id": 13
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "naziv": "Knjižnice grada Zagreba",
-        "adresa": "Starčevićev trg 6",
-        "postanski_broj": "10000",
-        "grad": "Zagreb",
-        "zupanija": "Grad Zagreb",
-        "telefon": "014572344",
-        "mail": "kgz@kgz.hr",
-        "web": " http://www.kgz.hr",
-        "vrsta_knjiznice": "Mreža narodnih knjižnica",
-        "odjeli": [],
-        "zaposlenici": [
-            {
-                "ime": "Ivana+",
-                "prezime": "Brletić",
-                "radni_odnos": "Tajnica ravnateljice",
-                "zaposlenik_id": 18
-            },
-            {
-                "ime": "Sunčica",
-                "prezime": "Ostoić",
-                "radni_odnos": "Viša knjižničarka",
-                "zaposlenik_id": 17
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "naziv": "Gradska knjižnica Krk",
-        "adresa": "Kvarnerska 23",
-        "postanski_broj": "51500",
-        "grad": "Krk",
-        "zupanija": "Primorsko-goranska županija",
-        "telefon": "051221149",
-        "mail": "info@gkkrk.hr",
-        "web": " http://www.gkkrk.hr/",
-        "vrsta_knjiznice": "Gradska",
-        "odjeli": [],
-        "zaposlenici": []
-    },
-    {
-        "id": 6,
-        "naziv": "Gradska knjižnica Dugo Selo",
-        "adresa": "Josipa Zorića 17",
-        "postanski_broj": "10370",
-        "grad": "Dugo Selo",
-        "zupanija": "Zagrebačka županija",
-        "telefon": "012753754",
-        "mail": "gkds@gkds.hr",
-        "web": "  http://gkds.hr/",
-        "vrsta_knjiznice": "Gradska",
-        "odjeli": [],
-        "zaposlenici": []
-    },
-    {
-        "id": 7,
-        "naziv": "Gradska knjižnica Zadar - Bibliobus",
-        "adresa": "Stjepana Radića 11b",
-        "postanski_broj": "23000",
-        "grad": "Zadar",
-        "zupanija": "Zadarska županija",
-        "telefon": "098230635",
-        "mail": "bus@gkzd.hr",
-        "web": " http://www.gkzd.hr/bibliobus.php",
+        "telefon": "0911720987",
+        "mail": "bibliobus@knjiznica-krizevci.hr",
+        "web": "https://www.knjiznica-krizevci.hr/",
         "vrsta_knjiznice": "Bibliobusna",
         "odjeli": [
             {
-                "odjel_id": 17,
-                "odjel_naziv": "Američki kutak"
+                "odjel_naziv": "Odjel beletristike"
             },
             {
-                "odjel_id": 18,
-                "odjel_naziv": "Mladi"
+                "odjel_naziv": "Kutić za mlade"
             }
         ],
-        "zaposlenici": []
+        "zaposlenici": [
+            {
+                "ime": "Marina",
+                "prezime": "Vidović Krušić",
+                "radni_odnos": "Ravnateljica"
+            },
+            {
+                "ime": "Igor",
+                "prezime": "Kuzmić",
+                "radni_odnos": "Knjižničar"
+            }
+        ]
     },
     {
-        "id": 8,
         "naziv": "Gradska knjižnica Bakar",
         "adresa": "Primorje 45/A",
         "postanski_broj": "51222",
@@ -205,13 +80,57 @@
             {
                 "ime": " Dolores",
                 "prezime": "Paro-Mikeli",
-                "radni_odnos": "Ravnateljica",
-                "zaposlenik_id": 16
+                "radni_odnos": "Ravnateljica"
             }
         ]
     },
     {
-        "id": 9,
+        "naziv": "Gradska knjižnica Dugo Selo",
+        "adresa": "Josipa Zorića 17",
+        "postanski_broj": "10370",
+        "grad": "Dugo Selo",
+        "zupanija": "Zagrebačka županija",
+        "telefon": "012753754",
+        "mail": "gkds@gkds.hr",
+        "web": "  http://gkds.hr/",
+        "vrsta_knjiznice": "Gradska",
+        "odjeli": [],
+        "zaposlenici": []
+    },
+    {
+        "naziv": "Gradska knjižnica Krk",
+        "adresa": "Kvarnerska 23",
+        "postanski_broj": "51500",
+        "grad": "Krk",
+        "zupanija": "Primorsko-goranska županija",
+        "telefon": "051221149",
+        "mail": "info@gkkrk.hr",
+        "web": " http://www.gkkrk.hr/",
+        "vrsta_knjiznice": "Gradska",
+        "odjeli": [],
+        "zaposlenici": []
+    },
+    {
+        "naziv": "Gradska knjižnica Zadar - Bibliobus",
+        "adresa": "Stjepana Radića 11b",
+        "postanski_broj": "23000",
+        "grad": "Zadar",
+        "zupanija": "Zadarska županija",
+        "telefon": "098230635",
+        "mail": "bus@gkzd.hr",
+        "web": " http://www.gkzd.hr/bibliobus.php",
+        "vrsta_knjiznice": "Bibliobusna",
+        "odjeli": [
+            {
+                "odjel_naziv": "Američki kutak"
+            },
+            {
+                "odjel_naziv": "Mladi"
+            }
+        ],
+        "zaposlenici": []
+    },
+    {
         "naziv": "Gradska sveučilišna knjižnica Osijek",
         "adresa": "Europske avenije 24",
         "postanski_broj": "31000",
@@ -223,18 +142,68 @@
         "vrsta_knjiznice": "Gradska",
         "odjeli": [
             {
-                "odjel_id": 15,
                 "odjel_naziv": "Posudbeni odjel za odrasle"
             },
             {
-                "odjel_id": 16,
                 "odjel_naziv": "Studijska čitaonica"
             }
         ],
         "zaposlenici": []
     },
     {
-        "id": 10,
+        "naziv": "Knjižnica i čitaonica 'Fran Galović' Koprivnica - Bibliobus",
+        "adresa": "Zrinski trg 6",
+        "postanski_broj": "48000",
+        "grad": "Koprivnica",
+        "zupanija": "Koprivničko-križevačka županija",
+        "telefon": "048-622363",
+        "mail": "odrasli@knjiznica-koprivnica.hr",
+        "web": "https://www.knjiznica-koprivnica.hr/",
+        "vrsta_knjiznice": "Bibliobusna",
+        "odjeli": [],
+        "zaposlenici": [
+            {
+                "ime": "Marija",
+                "prezime": "Vugrinec",
+                "radni_odnos": "Diplomirani informatičar"
+            },
+            {
+                "ime": "Danijela",
+                "prezime": "Petrić",
+                "radni_odnos": "Voditeljica odjela"
+            },
+            {
+                "ime": "Jasminka",
+                "prezime": "Vajzović",
+                "radni_odnos": "Viša knjižničarka"
+            }
+        ]
+    },
+    {
+        "naziv": "Knjižnice grada Zagreba",
+        "adresa": "Starčevićev trg 6",
+        "postanski_broj": "10000",
+        "grad": "Zagreb",
+        "zupanija": "Grad Zagreb",
+        "telefon": "014572344",
+        "mail": "kgz@kgz.hr",
+        "web": " http://www.kgz.hr",
+        "vrsta_knjiznice": "Mreža narodnih knjižnica",
+        "odjeli": [],
+        "zaposlenici": [
+            {
+                "ime": "Sunčica",
+                "prezime": "Ostoić",
+                "radni_odnos": "Viša knjižničarka"
+            },
+            {
+                "ime": "Ivana+",
+                "prezime": "Brletić",
+                "radni_odnos": "Tajnica ravnateljice"
+            }
+        ]
+    },
+    {
         "naziv": "Narodna knjižnica 'Petar Preradović' Bjelovar - Bibliobus",
         "adresa": "Trg Eugena Kvaternika 11",
         "postanski_broj": "43000",
@@ -246,58 +215,47 @@
         "vrsta_knjiznice": "Bibliobusna",
         "odjeli": [
             {
-                "odjel_id": 8,
                 "odjel_naziv": "Dječji odjel i Igraonica"
             },
             {
-                "odjel_id": 9,
                 "odjel_naziv": "Odjel za odrasle"
             },
             {
-                "odjel_id": 10,
                 "odjel_naziv": "Studijski odjel"
             },
             {
-                "odjel_id": 11,
                 "odjel_naziv": "Čitaonica tiska"
             },
             {
-                "odjel_id": 12,
                 "odjel_naziv": "Bibliobusna služba"
             },
             {
-                "odjel_id": 13,
                 "odjel_naziv": "Županijska matična služba"
             },
             {
-                "odjel_id": 14,
                 "odjel_naziv": "Služba nabave i obrade"
             }
         ],
         "zaposlenici": [
             {
-                "ime": "Ana",
-                "prezime": "Kraljić",
-                "radni_odnos": "Knjižničarka klasifikatorica i katalogizatorica",
-                "zaposlenik_id": 8
-            },
-            {
-                "ime": "Ana",
-                "prezime": "Peranić",
-                "radni_odnos": "Voditeljica Službe za nabavu i obradu",
-                "zaposlenik_id": 7
-            },
-            {
                 "ime": "Neda",
                 "prezime": "Adamović",
-                "radni_odnos": "Voditeljica Županijske matične razvojne službe",
-                "zaposlenik_id": 5
+                "radni_odnos": "Voditeljica Županijske matične razvojne službe"
             },
             {
                 "ime": "Vjeruška",
                 "prezime": "Štivić",
-                "radni_odnos": "Ravnateljica",
-                "zaposlenik_id": 6
+                "radni_odnos": "Ravnateljica"
+            },
+            {
+                "ime": "Ana",
+                "prezime": "Peranić",
+                "radni_odnos": "Voditeljica Službe za nabavu i obradu"
+            },
+            {
+                "ime": "Ana",
+                "prezime": "Kraljić",
+                "radni_odnos": "Knjižničarka klasifikatorica i katalogizatorica"
             }
         ]
     }
