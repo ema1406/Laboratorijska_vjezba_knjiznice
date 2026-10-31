@@ -2,148 +2,247 @@
     {
         "id": 5,
         "naziv": "Gradska knjižnica Krk",
-        "grad": "Krk",
-        "zupanija": "Primorsko-goranska županija",
-        "odjeli": null
+        "odjeli": [],
+        "zaposlenici": []
     },
     {
         "id": 6,
         "naziv": "Gradska knjižnica Dugo Selo",
-        "grad": "Dugo Selo",
-        "zupanija": "Zagrebačka županija",
-        "odjeli": null
-    },
-    {
-        "id": 1,
-        "naziv": "Gradska knjižnica \\"Franjo Marković\\" Križevci - Bibliobus",
-        "grad": "Križevci",
-        "zupanija": "Koprivničko-križevačka županija",
-        "odjeli": null
+        "odjeli": [],
+        "zaposlenici": []
     },
     {
         "id": 2,
         "naziv": "Dubrovačke knjižnice Dubrovnik - Narodna knjižnica Grad",
-        "grad": "Dubrovnik",
-        "zupanija": "Dubrovačko-neretvanska županija",
         "odjeli": [
             {
                 "id": 1,
-                "naziv": "Odjel posudbe",
-                "zaposlenici": null
+                "naziv": "Odjel posudbe"
             },
             {
                 "id": 2,
-                "naziv": "Odjel za djecu i mlade",
-                "zaposlenici": null
+                "naziv": "Odjel za djecu i mlade"
             },
             {
                 "id": 3,
-                "naziv": "Čitaonica",
-                "zaposlenici": null
+                "naziv": "Čitaonica"
             },
             {
                 "id": 4,
-                "naziv": "Odjel nabave",
-                "zaposlenici": null
+                "naziv": "Odjel nabave"
             },
             {
                 "id": 5,
-                "naziv": "Odjel obrade građe",
-                "zaposlenici": null
+                "naziv": "Odjel obrade građe"
             },
             {
                 "id": 6,
-                "naziv": "Matična služba",
-                "zaposlenici": null
+                "naziv": "Matična služba"
             },
             {
                 "id": 7,
-                "naziv": "Informacijska služba",
-                "zaposlenici": null
+                "naziv": "Informacijska služba"
             }
-        ]
+        ],
+        "zaposlenici": []
     },
     {
         "id": 4,
         "naziv": "Knjižnice grada Zagreba",
-        "grad": "Zagreb",
-        "zupanija": "Grad Zagreb",
-        "odjeli": null
+        "odjeli": [],
+        "zaposlenici": [
+            {
+                "id": 17,
+                "ime": "Sunčica",
+                "prezime": "Ostoić",
+                "radni_odnos": "Viša knjižničarka"
+            },
+            {
+                "id": 18,
+                "ime": "Ivana+",
+                "prezime": "Brletić",
+                "radni_odnos": "Tajnica ravnateljice"
+            }
+        ]
     },
     {
         "id": 7,
         "naziv": "Gradska knjižnica Zadar - Bibliobus",
-        "grad": "Zadar",
-        "zupanija": "Zadarska županija",
-        "odjeli": null
+        "odjeli": [
+            {
+                "id": 17,
+                "naziv": "Američki kutak"
+            },
+            {
+                "id": 18,
+                "naziv": "Mladi"
+            }
+        ],
+        "zaposlenici": []
     },
     {
         "id": 8,
         "naziv": "Gradska knjižnica Bakar",
-        "grad": "Bakar",
-        "zupanija": "Primorsko-goranska županija",
-        "odjeli": null
+        "odjeli": [],
+        "zaposlenici": [
+            {
+                "id": 16,
+                "ime": " Dolores",
+                "prezime": "Paro-Mikeli",
+                "radni_odnos": "Ravnateljica"
+            }
+        ]
     },
     {
         "id": 9,
         "naziv": "Gradska sveučilišna knjižnica Osijek",
-        "grad": "Osijek",
-        "zupanija": "Osječko-baranjska županija",
-        "odjeli": null
+        "odjeli": [
+            {
+                "id": 15,
+                "naziv": "Posudbeni odjel za odrasle"
+            },
+            {
+                "id": 16,
+                "naziv": "Studijska čitaonica"
+            }
+        ],
+        "zaposlenici": []
     },
     {
         "id": 10,
-        "naziv": "Narodna knjižnica \\"Petar Preradović\\" Bjelovar - Bibliobus",
-        "grad": "Bjelovar",
-        "zupanija": "Bjelovarsko-bilogorska županija",
+        "naziv": "Narodna knjižnica 'Petar Preradović' Bjelovar - Bibliobus",
         "odjeli": [
             {
                 "id": 8,
-                "naziv": "Dječji odjel i Igraonica",
-                "zaposlenici": null
+                "naziv": "Dječji odjel i Igraonica"
             },
             {
                 "id": 9,
-                "naziv": "Odjel za odrasle",
-                "zaposlenici": null
+                "naziv": "Odjel za odrasle"
             },
             {
                 "id": 10,
-                "naziv": "Studijski odjel",
-                "zaposlenici": null
+                "naziv": "Studijski odjel"
             },
             {
                 "id": 11,
-                "naziv": "Čitaonica tiska",
-                "zaposlenici": null
+                "naziv": "Čitaonica tiska"
             },
             {
                 "id": 12,
-                "naziv": "Bibliobusna služba",
-                "zaposlenici": null
+                "naziv": "Bibliobusna služba"
             },
             {
                 "id": 13,
-                "naziv": "Županijska matična služba",
-                "zaposlenici": [
-                    {
-                        "ime": "Neda",
-                        "prezime": "Adamović"
-                    }
-                ]
+                "naziv": "Županijska matična služba"
             },
             {
                 "id": 14,
-                "naziv": "Služba nabave i obrade",
-                "zaposlenici": null
+                "naziv": "Služba nabave i obrade"
+            }
+        ],
+        "zaposlenici": [
+            {
+                "id": 5,
+                "ime": "Neda",
+                "prezime": "Adamović",
+                "radni_odnos": "Voditeljica Županijske matične razvojne službe"
+            },
+            {
+                "id": 6,
+                "ime": "Vjeruška",
+                "prezime": "Štivić",
+                "radni_odnos": "Ravnateljica"
+            },
+            {
+                "id": 7,
+                "ime": "Ana",
+                "prezime": "Peranić",
+                "radni_odnos": "Voditeljica Službe za nabavu i obradu"
+            },
+            {
+                "id": 8,
+                "ime": "Ana",
+                "prezime": "Kraljić",
+                "radni_odnos": "Knjižničarka klasifikatorica i katalogizatorica"
+            },
+            {
+                "id": 9,
+                "ime": "Neda",
+                "prezime": "Adamović",
+                "radni_odnos": "Voditeljica Županijske matične razvojne službe"
+            },
+            {
+                "id": 10,
+                "ime": "Vjeruška",
+                "prezime": "Štivić",
+                "radni_odnos": "Ravnateljica"
+            },
+            {
+                "id": 11,
+                "ime": "Ana",
+                "prezime": "Peranić",
+                "radni_odnos": "Voditeljica Službe za nabavu i obradu"
+            },
+            {
+                "id": 12,
+                "ime": "Ana",
+                "prezime": "Kraljić",
+                "radni_odnos": "Knjižničarka klasifikatorica i katalogizatorica"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "naziv": "Gradska knjižnica 'Franjo Marković' Križevci - Bibliobus",
+        "odjeli": [
+            {
+                "id": 19,
+                "naziv": "Odjel beletristike"
+            },
+            {
+                "id": 20,
+                "naziv": "Kutić za mlade"
+            }
+        ],
+        "zaposlenici": [
+            {
+                "id": 19,
+                "ime": "Marina",
+                "prezime": "Vidović Krušić",
+                "radni_odnos": "Ravnateljica"
+            },
+            {
+                "id": 20,
+                "ime": "Igor",
+                "prezime": "Kuzmić",
+                "radni_odnos": "Knjižničar"
             }
         ]
     },
     {
         "id": 3,
-        "naziv": "Knjižnica i čitaonica \\"Fran Galović\\" Koprivnica - Bibliobus",
-        "grad": "Koprivnica",
-        "zupanija": "Koprivničko-križevačka županija",
-        "odjeli": null
+        "naziv": "Knjižnica i čitaonica 'Fran Galović' Koprivnica - Bibliobus",
+        "odjeli": [],
+        "zaposlenici": [
+            {
+                "id": 13,
+                "ime": "Marija",
+                "prezime": "Vugrinec",
+                "radni_odnos": "Diplomirani informatičar"
+            },
+            {
+                "id": 14,
+                "ime": "Danijela",
+                "prezime": "Petrić",
+                "radni_odnos": "Voditeljica odjela"
+            },
+            {
+                "id": 15,
+                "ime": "Jasminka",
+                "prezime": "Vajzović",
+                "radni_odnos": "Viša knjižničarka"
+            }
+        ]
     }
 ]

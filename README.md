@@ -21,9 +21,9 @@ Jedan od korištenih izvora:
 https://www.knjiznica.hr/export
 ### Sadržaj skupa podataka
 Skup podataka sastoji se od tri povezane tablice:
-- **knjiznice** – sadrži osnovne podatke o knjižnicama.
-- **odjeli** – sadrži podatke o odjelima pojedinih knjižnica.
-- **zaposlenici** – sadrži podatke o zaposlenicima i njihovoj povezanosti s knjižnicama i odjelima.
+- **knjiznice** – sadrži osnovne podatke o knjižnicama (naziv, adresa, poštanski broj, grad, županija, telefon, web i vrsta knjižnice)
+- **odjeli** – sadrži podatke o tome koje odjele ima knjižnica (naziv)
+- **zaposlenici** – sadrži podatke o zaposlenicima i njihovoj povezanosti s knjižnicama (ime, prezime, radni odnos)
 ### Formati podataka
 - CSV
 - JSON
