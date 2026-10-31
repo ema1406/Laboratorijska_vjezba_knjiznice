@@ -8,7 +8,7 @@ Ovaj skup podataka sadrži informacije o odabranim javnim knjižnicama na podru�
 ### Opis licencija
 Licencija: Creative Commons CC0 1.0 Universal
 ### Autor
-Autor: Ema Pavić
+Ema Pavić
 ### Datum izrade
 30.10.2026.
 ### Verzija skupa
