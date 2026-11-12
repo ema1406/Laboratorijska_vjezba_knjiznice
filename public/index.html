@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Skup podataka o knjižnicama, njihovim odjelima i zaposlenicima."
+    />
+    <meta name="author" content="Ema Pavić" />
+    <title>Knjižnice</title>
+
+    <style>
+     body {
+        font-family: 'Calibri', 'Segoe UI', Tahoma, sans-serif;
+        margin: 0;
+        padding: 30px;
+        background-color: #e6f2ff;
+        color: #2c3e50;
+        line-height: 1.6;
+      }
+
+      nav {
+        margin-bottom: 25px;
+        padding: 12px 20px;
+        background-color: #85c2ff;
+        border-radius: 8px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 15px;
+        font-weight: bold;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #1a365d;
+        padding: 6px 12px;
+        border-radius: 4px;
+      }
+
+      .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+
+      .main {
+        margin-top: 20px;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+      }
+
+      h1 {
+        color: #1a365d;
+        margin-top: 0;
+        border-bottom: 2px solid #e6f2ff;
+        padding-bottom: 10px;
+      }
+
+      .download {
+        margin-top: 25px;
+        padding: 20px;
+        background-color: #ffe0fb;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .download p {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .download h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #8a1c7c;
+      }
+
+      .download a {
+        width: fit-content;
+        margin-right: 15px;
+        border-radius: 6px;
+        padding: 10px 18px;
+        background-color: #ff8ff9;
+        color: rgb(112, 4, 88);
+        font-weight: bold;
+        text-decoration: none;
+        border: 2px solid #ffbdfc;
+        display: inline-flex;
+        align-items: center;
+      }
+
+
+      .download a:hover {
+        background-color: #ff6df6;
+        color: #fff;
+      }
+
+      section.metadata {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        font-size: 17px; 
+      }
+
+      section.metadata h2 {
+        color: #1a365d;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+      }
+
+      section.metadata h3 {
+        margin-bottom: 5px;
+        color: #4a5568;
+        font-size: 1.1rem;
+      }
+
+      section.metadata p {
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      section.metadata ul {
+        margin-top: 0;
+        padding-left: 20px;
+      }
+
+      section.metadata li {
+        margin-bottom: 8px;
+      }
+
+      code {
+        background-color: #f0f4f8;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+        color: #d63384;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-links">
+        <a href="index.html">Početna</a>
+        <a href="datatable.html">Pregled podataka</a>
+      </div>
+    </nav>
+
+    <div class="main">
+      <h1>Skup podataka o knjižnicama</h1>
+
+
+        <article class="readme">
+          <section>
+            <h2>Opis skupa podataka</h2>
+            <p>
+              Ovaj skup podataka sadrži informacije o odabranim javnim
+              knjižnicama na području Republike Hrvatske. Podaci obuhvaćaju
+              osnovne informacije o knjižnicama, njihovim odjelima i
+              zaposlenicima.
+            </p>
+
+          </section>
+
+            <div class="download">
+                <h2>Preuzimanje podataka</h2>
+
+                <p>Podatke možete preuzeti u sljedećim formatima:</p>
+
+                <a href="knjiznice.json" download="knjiznice.json"> Preuzmi JSON </a>
+
+                <a href="knjiznice.csv" download="knjiznice.csv"> Preuzmi CSV </a>
+            </div>
+
+          <section class="metadata">
+            <h2>Metapodaci</h2>
+
+            <h3>Opis licencija</h3>
+            <p>Licencija: Creative Commons CC0 1.0 Universal</p>
+
+            <h3>Autor</h3>
+            <p>Ema Pavić</p>
+
+            <h3>Datum izrade</h3>
+            <p>30.10.2026.</p>
+
+            <h3>Verzija skupa</h3>
+            <p>Verzija: 1.0</p>
+
+            <h3>Jezik</h3>
+            <p>Hrvatski jezik</p>
+
+            <h3>Izvor podataka</h3>
+            <p>
+              Podaci su prikupljeni iz javno dostupnih informacija o knjižnicama
+              i njihovim mrežnim stranicama.<br />
+              Jedan od korištenih izvora:
+              <a
+                href="https://www.knjiznica.hr/export"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://www.knjiznica.hr/export</a
+              >
+            </p>
+
+            <h3>Sadržaj skupa podataka</h3>
+            <p>Skup podataka sastoji se od tri povezane tablice:</p>
+            <ul>
+              <li>
+                <code>knjiznice</code> - sadrži osnovne podatke o knjižnicama
+                (naziv, adresa, poštanski broj, grad, županija, telefon, web i
+                vrsta knjižnice)
+              </li>
+              <li>
+                <code>odjeli</code> - sadrži podatke o tome koje odjele ima
+                knjižnica (naziv)
+              </li>
+              <li>
+                <code>zaposlenici</code> - sadrži podatke o zaposlenicima i
+                njihovoj povezanosti s knjižnicama (ime, prezime, radni odnos)
+              </li>
+            </ul>
+
+            <h3>Formati podataka</h3>
+            <ul>
+              <li>CSV</li>
+              <li>JSON</li>
+              <li>SQL</li>
+            </ul>
+          </section>
+        </article>
+      </section>
+
+    </div>
+  </body>
+</html>

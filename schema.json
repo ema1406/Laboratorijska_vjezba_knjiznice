@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Knjiznice Schema",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "naziv": {
+                "type": "string"
+            },
+            "adresa": {
+                "type": "string"
+            },
+            "postanski_broj": {
+                "type": "string"
+            },
+            "grad": {
+                "type": "string"
+            },
+            "zupanija": {
+                "type": "string"
+            },
+            "telefon": {
+                "type": "string"
+            },
+            "mail": {
+                "type": "string",
+                "format": "email"
+            },
+            "web": {
+                "type": "string",
+                "format": "uri"
+            },
+            "vrsta_knjiznice": {
+                "type": "string"
+            },
+            "odjeli": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "odjel_naziv": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "odjel_naziv"
+                    ]
+                }
+            },
+            "zaposlenici": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "ime": {
+                            "type": "string"
+                        },
+                        "prezime": {
+                            "type": "string"
+                        },
+                        "radni_odnos": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "ime",
+                        "prezime",
+                        "radni_odnos"
+                    ]
+                }
+            }
+        },
+        "required": [
+            "naziv",
+            "adresa",
+            "postanski_broj",
+            "grad",
+            "zupanija",
+            "telefon",
+            "mail",
+            "web",
+            "vrsta_knjiznice",
+            "odjeli",
+            "zaposlenici"
+        ]
+    }
+}

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pregled i filtriranje podataka o knjižnicama, odjelima i zaposlenicima."
+    />
+    <meta name="author" content="Ema Pavić" />
+    <title>Pregled podataka - Knjižnice</title>
+    <style>
+      body {
+        font-family: "Calibri", Arial, sans-serif;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 25px;
+        background-color: #e6f2ff;
+        color: #2c3e50;
+      }
+
+      nav {
+        margin-bottom: 20px;
+        padding: 12px 15px;
+        background-color: #85c2ff;
+        border-radius: 6px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 15px;
+        font-weight: bold;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #1a365d;
+        padding: 5px 10px;
+        border-radius: 4px;
+      }
+
+      .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+
+      h1 {
+        color: #1a365d;
+        margin-top: 0;
+      }
+
+      .filter-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        border: 1px solid #cfe2ff;
+      }
+
+      .filter-section label {
+        font-weight: bold;
+        color: #1a365d;
+      }
+
+      input,
+      select {
+        padding: 8px 12px;
+        margin-right: 15px;
+        width: 240px;
+        border: 1px solid #bce1ff;
+        border-radius: 4px;
+        background-color: #fafbfc;
+      }
+
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: #85c2ff;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid #cfe2ff;
+      }
+
+      th,
+      td {
+        border: 1px solid #e2e8f0;
+        padding: 10px 12px;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      th {
+        background-color: #d0e5ff;
+        color: #1a365d;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f8fbff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-links">
+        <a href="index.html">Početna</a>
+        <a href="datatable.html">Pregled podataka</a>
+      </div>
+    </nav>
+
+    <h1>Tablični pregled knjižnica</h1>
+
+    <div class="filter-section">
+      <label for="searchInput">Pretraži:</label>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Upišite pojam za pretragu..."
+        onkeyup="filtrirajIspis()"
+      />
+
+      <label for="filterAttr">Atribut:</label>
+      <select id="filterAttr" onchange="filtrirajIspis()">
+        <option value="sve">Svi atributi (Wildcard)</option>
+        <option value="naziv">Naziv knjižnice</option>
+        <option value="grad">Grad</option>
+        <option value="vrsta_knjiznice">Vrsta knjižnice</option>
+        <option value="odjel_naziv">Naziv odjela</option>
+        <option value="ime">Ime zaposlenika</option>
+      </select>
+    </div>
+
+    <!-- Podatkovna tablica -->
+    <table id="knjizniceTable">
+      <thead>
+        <tr>
+          <th>Naziv</th>
+          <th>Adresa</th>
+          <th>Poštanski broj</th>
+          <th>Grad</th>
+          <th>Županija</th>
+          <th>Telefon</th>
+          <th>Mail</th>
+          <th>Web</th>
+          <th>Vrsta knjižnice</th>
+          <th>Odjel naziv</th>
+          <th>Ime</th>
+          <th>Prezime</th>
+          <th>Radni odnos</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      let sviPodaci = [];
+
+      // Asinkrono dohvaćanje podataka s našeg Node.js servera (/api/knjiznice)
+      async function dohvatiPodatkeIzBaze() {
+        try {
+          const odgovor = await fetch("/api/knjiznice");
+          sviPodaci = await odgovor.json();
+          prikaziPodatke(sviPodaci); // Inicijalni prikaz svih podataka
+        } catch (greska) {
+          console.error("Greška pri dohvaćanju podataka:", greska);
+        }
+      }
+
+      // Funkcija za iscrtavanje tablice
+      function prikaziPodatke(podaciZaPrikaz) {
+        const tbody = document.querySelector("#knjizniceTable tbody");
+        tbody.innerHTML = "";
+
+        if (podaciZaPrikaz.length === 0) {
+          tbody.innerHTML =
+            '<tr><td colspan="13" style="text-align:center;">Nema pronađenih podataka</td></tr>';
+          return;
+        }
+
+        podaciZaPrikaz.forEach((item) => {
+          const red = `<tr>
+                    <td>${item.naziv || ""}</td>
+                    <td>${item.adresa || ""}</td>
+                    <td>${item.postanski_broj || ""}</td>
+                    <td>${item.grad || ""}</td>
+                    <td>${item.zupanija || ""}</td>
+                    <td>${item.telefon || ""}</td>
+                    <td>${item.mail || ""}</td>
+                    <td>${item.web || ""}</td>
+                    <td>${item.vrsta_knjiznice || ""}</td>
+                    <td>${item.odjel_naziv || ""}</td>
+                    <td>${item.ime || ""}</td>
+                    <td>${item.prezime || ""}</td>
+                    <td>${item.radni_odnos || ""}</td>
+                </tr>`;
+          tbody.innerHTML += red;
+        });
+      }
+
+      // Funkcija za filtriranje podataka na klijentskoj strani
+      function filtrirajIspis() {
+        const pojam = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const atribut = document.getElementById("filterAttr").value;
+
+        const filtrirani = sviPodaci.filter((item) => {
+          if (pojam === "") return true; // Ako je polje prazno, vrati sve
+
+          if (atribut === "sve") {
+            // Pretražuje po svim ključnim atributima (wildcard)
+            return Object.values(item).some(
+              (vrijednost) =>
+                vrijednost &&
+                vrijednost.toString().toLowerCase().includes(pojam),
+            );
+          } else {
+            // Pretražuje samo po odabranom atributu
+            const vrijednostPolja = item[atribut];
+            return (
+              vrijednostPolja && vrijednostPolja.toLowerCase().includes(pojam)
+            );
+          }
+        });
+
+        prikaziPodatke(filtrirani);
+      }
+
+      // Pokreni dohvaćanje podataka čim se stranica učita
+      window.onload = dohvatiPodatkeIzBaze;
+    </script>
+  </body>
+</html>

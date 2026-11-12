@@ -1,0 +1,26 @@
+{
+  "name": "laboratorijska_vjezba_knjiznice",
+  "version": "1.0.0",
+  "description": "Ovaj skup podataka sadrži informacije o odabranim javnim knjižnicama na području Republike Hrvatske. Podaci obuhvaćaju osnovne informacije o knjižnicama, njihovim odjelima i zaposlenicima.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ema1406/Laboratorijska_vjezba_knjiznice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ema1406/Laboratorijska_vjezba_knjiznice/issues"
+  },
+  "homepage": "https://github.com/ema1406/Laboratorijska_vjezba_knjiznice#readme",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "pg": "^8.23.1"
+  }
+}

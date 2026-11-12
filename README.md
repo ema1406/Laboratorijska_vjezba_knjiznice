@@ -24,6 +24,25 @@ Skup podataka sastoji se od tri povezane tablice:
 - **knjiznice** – sadrži osnovne podatke o knjižnicama (naziv, adresa, poštanski broj, grad, županija, telefon, web i vrsta knjižnice)
 - **odjeli** – sadrži podatke o tome koje odjele ima knjižnica (naziv)
 - **zaposlenici** – sadrži podatke o zaposlenicima i njihovoj povezanosti s knjižnicama (ime, prezime, radni odnos)
+### Opis atributa
+#### Knjižnice:
+naziv - puni naziv knjižnice
+adresa - ulica i kućni broj knjižnice
+postanski_broj - poštanski broj vezan za grad koji je
+grad - grad gdje je locirana knjižnica
+zupanija - županija u kojoj se nalazi knjižnica
+telefon - kontakt broj knjižnice
+mail - kontakt mail knjižnice
+web - službena stranica navedene knjižnice
+vrsta_knjiznice - u koju kategoriju spada (gradska, narodna, sveučilišna...)
+#### Odjeli:
+odjel_naziv - naziv odjela specifičan za tu knjižnicu
+#### Zaposlenici:
+ime - ime navedeno na web stranici knjižnice
+prezime - prezime navedeno na web stranici knjižnice
+radni_odnos - na kojoj poziciji je zaposlenik
+
+
 ### Formati podataka
 - CSV
 - JSON
