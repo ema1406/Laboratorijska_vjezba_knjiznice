@@ -4,35 +4,58 @@
     "type": "array",
     "items": {
         "type": "object",
+        "title": "Knjižnice",
+        "description": "Ovaj skup podataka sadrži informacije o odabranim javnim knjižnicama na području Republike Hrvatske. Podaci obuhvaćaju osnovne informacije o knjižnicama, njihovim odjelima i zaposlenicima.",
         "properties": {
             "naziv": {
-                "type": "string"
+                "type": "string",
+                "title": "Naziv knjižnice",
+                "description": "puni naziv knjižnice"
             },
             "adresa": {
-                "type": "string"
+                "type": "string",
+                "title": "Adresa",
+                "description": "ulica i kućni broj knjižnice"
             },
             "postanski_broj": {
-                "type": "string"
+                "type": "string",
+                "title": "Poštanski broj",
+                "description": "poštanski broj knjižnice"
             },
             "grad": {
-                "type": "string"
+                "type": "string",
+                "title": "Grad",
+                "description": "grad u kojem se knjižnica nalazi"
             },
             "zupanija": {
-                "type": "string"
+                "type": "string",
+                "title": "Županija",
+                "description": "županija u kojoj se knjižnica nalazi"
             },
             "telefon": {
-                "type": "string"
+                "type": [
+                    "string",
+                    "number"
+                ],
+                "title": "Telefon",
+                "description": "kontakt broj knjižnice"
             },
             "mail": {
                 "type": "string",
-                "format": "email"
+                "format": "email",
+                "title": "Email",
+                "description": "kontakt email knjižnice"
             },
             "web": {
                 "type": "string",
-                "format": "uri"
+                "format": "uri",
+                "title": "Web stranica",
+                "description": "službena web stranica navedene knjižnice"
             },
             "vrsta_knjiznice": {
-                "type": "string"
+                "type": "string",
+                "title": "Vrsta knjižnice",
+                "description": "vrsta knjižnice"
             },
             "odjeli": {
                 "type": "array",
@@ -40,7 +63,12 @@
                     "type": "object",
                     "properties": {
                         "odjel_naziv": {
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "title": "Naziv odjela",
+                            "description": "naziv odjela specifičan za tu knjižnice"
                         }
                     },
                     "required": [
@@ -54,13 +82,19 @@
                     "type": "object",
                     "properties": {
                         "ime": {
-                            "type": "string"
+                            "type": "string",
+                            "title": "Ime",
+                            "description": "ime zaposlenika navedeno na web stranici knjižnice"
                         },
                         "prezime": {
-                            "type": "string"
+                            "type": "string",
+                            "title": "Prezime",
+                            "description": "prezime zaposlenika navedeno na web stranici knjižnice"
                         },
                         "radni_odnos": {
-                            "type": "string"
+                            "type": "string",
+                            "title": "Radni odnos",
+                            "description": "na kojoj poziciji je zaposlenik"
                         }
                     },
                     "required": [

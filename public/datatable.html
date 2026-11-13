@@ -12,8 +12,7 @@
     <style>
       body {
         font-family: "Calibri", Arial, sans-serif;
-        max-width: 1100px;
-        margin: 0 auto;
+        max-width: auto;
         padding: 25px;
         background-color: #e6f2ff;
         color: #2c3e50;
@@ -54,6 +53,10 @@
         background-color: #ffffff;
         border-radius: 6px;
         border: 1px solid #cfe2ff;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
       }
 
       .filter-section label {
@@ -64,17 +67,49 @@
       input,
       select {
         padding: 8px 12px;
-        margin-right: 15px;
-        width: 240px;
+        width: 220px;
         border: 1px solid #bce1ff;
         border-radius: 4px;
         background-color: #fafbfc;
       }
 
-      input:focus,
-      select:focus {
-        outline: none;
-        border-color: #85c2ff;
+      button {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .btn-pretrazi {
+        background-color: #1a365d;
+        color: white;
+      }
+      .btn-pretrazi:hover {
+        background-color: #2c5282;
+      }
+
+      .btn-csv {
+        background-color: #bf59df;
+        color: white;
+      }
+      .btn-csv:hover {
+        background-color: #783581;
+      }
+
+      .btn-json {
+        background-color: #e851c5;
+        color: white;
+      }
+      .btn-json:hover {
+        background-color: #982b6d;
+      }
+
+      .export-section {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        width: 100%;
       }
 
       table {
@@ -99,10 +134,6 @@
         background-color: #d0e5ff;
         color: #1a365d;
       }
-
-      tr:nth-child(even) {
-        background-color: #f8fbff;
-      }
     </style>
   </head>
   <body>
@@ -121,11 +152,10 @@
         type="text"
         id="searchInput"
         placeholder="Upišite pojam za pretragu..."
-        onkeyup="filtrirajIspis()"
       />
 
       <label for="filterAttr">Atribut:</label>
-      <select id="filterAttr" onchange="filtrirajIspis()">
+      <select id="filterAttr">
         <option value="sve">Svi atributi (Wildcard)</option>
         <option value="naziv">Naziv knjižnice</option>
         <option value="grad">Grad</option>
@@ -133,6 +163,19 @@
         <option value="odjel_naziv">Naziv odjela</option>
         <option value="ime">Ime zaposlenika</option>
       </select>
+
+      <button type="button" class="btn-pretrazi" onclick="filtrirajIspis()">
+        Pretraži
+      </button>
+
+      <div class="export-section">
+        <button type="button" class="btn-csv" onclick="preuzmiCSV()">
+          Preuzmi CSV
+        </button>
+        <button type="button" class="btn-json" onclick="preuzmiJSON()">
+          Preuzmi JSON
+        </button>
+      </div>
     </div>
 
     <!-- Podatkovna tablica -->
@@ -159,19 +202,19 @@
 
     <script>
       let sviPodaci = [];
+      let trenutnoPrikazaniPodaci = [];
 
-      // Asinkrono dohvaćanje podataka s našeg Node.js servera (/api/knjiznice)
       async function dohvatiPodatkeIzBaze() {
         try {
           const odgovor = await fetch("/api/knjiznice");
           sviPodaci = await odgovor.json();
-          prikaziPodatke(sviPodaci); // Inicijalni prikaz svih podataka
+          trenutnoPrikazaniPodaci = sviPodaci;
+          prikaziPodatke(trenutnoPrikazaniPodaci);
         } catch (greska) {
           console.error("Greška pri dohvaćanju podataka:", greska);
         }
       }
 
-      // Funkcija za iscrtavanje tablice
       function prikaziPodatke(podaciZaPrikaz) {
         const tbody = document.querySelector("#knjizniceTable tbody");
         tbody.innerHTML = "";
@@ -202,36 +245,120 @@
         });
       }
 
-      // Funkcija za filtriranje podataka na klijentskoj strani
       function filtrirajIspis() {
         const pojam = document
           .getElementById("searchInput")
-          .value.toLowerCase();
+          .value.toLowerCase()
+          .trim();
         const atribut = document.getElementById("filterAttr").value;
 
-        const filtrirani = sviPodaci.filter((item) => {
-          if (pojam === "") return true; // Ako je polje prazno, vrati sve
-
+        trenutnoPrikazaniPodaci = sviPodaci.filter((item) => {
+          if (pojam === "" || pojam === "sve") return true;
           if (atribut === "sve") {
-            // Pretražuje po svim ključnim atributima (wildcard)
             return Object.values(item).some(
               (vrijednost) =>
                 vrijednost &&
                 vrijednost.toString().toLowerCase().includes(pojam),
             );
           } else {
-            // Pretražuje samo po odabranom atributu
             const vrijednostPolja = item[atribut];
             return (
-              vrijednostPolja && vrijednostPolja.toLowerCase().includes(pojam)
+              vrijednostPolja &&
+              vrijednostPolja.toString().toLowerCase().includes(pojam)
             );
           }
         });
 
-        prikaziPodatke(filtrirani);
+        prikaziPodatke(trenutnoPrikazaniPodaci);
       }
 
-      // Pokreni dohvaćanje podataka čim se stranica učita
+      function preuzmiCSV() {
+        if (trenutnoPrikazaniPodaci.length === 0) {
+          alert("Nema podataka za preuzimanje.");
+          return;
+        }
+
+        const kljucevi = Object.keys(trenutnoPrikazaniPodaci[0]);
+        let csvSadrzaj = kljucevi.join(",") + "\n";
+
+        trenutnoPrikazaniPodaci.forEach((item) => {
+          let red = kljucevi
+            .map((kljuc) => {
+              let vrijednost = item[kljuc] ? item[kljuc].toString() : "";
+              vrijednost = `"${vrijednost.replace(/"/g, '""')}"`;
+              return vrijednost;
+            })
+            .join(",");
+
+          csvSadrzaj += red + "\n";
+        });
+
+        const encodedUri = encodeURI(
+          "data:text/csv;charset=utf-8," + csvSadrzaj,
+        );
+        const downloadAnchor = document.createElement("a");
+        downloadAnchor.setAttribute("href", encodedUri);
+        downloadAnchor.setAttribute("download", "knjiznice_filtrirano.csv");
+        document.body.appendChild(downloadAnchor);
+        downloadAnchor.click();
+        downloadAnchor.remove();
+      }
+
+      function preuzmiJSON() {
+        if (trenutnoPrikazaniPodaci.length === 0) {
+          alert("Nema podataka za preuzimanje.");
+          return;
+        }
+
+        const mapKnjiznice = {};
+
+        trenutnoPrikazaniPodaci.forEach((row) => {
+          const nazivKnjiznice = row.naziv;
+
+          if (!mapKnjiznice[nazivKnjiznice]) {
+            mapKnjiznice[nazivKnjiznice] = {
+              naziv: row.naziv || "",
+              adresa: row.adresa || "",
+              postanski_broj: row.postanski_broj || "",
+              grad: row.grad || "",
+              zupanija: row.zupanija || "",
+              telefon: row.telefon || "",
+              mail: row.mail || "",
+              web: row.web || "",
+              vrsta_knjiznice: row.vrsta_knjiznice || "",
+              odjeli: [],
+              zaposlenici: [],
+            };
+          }
+
+          if (row.odjel_naziv) {
+            mapKnjiznice[nazivKnjiznice].odjeli.push({
+              odjel_naziv: row.odjel_naziv,
+            });
+          }
+
+          if (row.ime || row.prezime) {
+            mapKnjiznice[nazivKnjiznice].zaposlenici.push({
+              ime: row.ime || "",
+              prezime: row.prezime || "",
+              radni_odnos: row.radni_odnos || "",
+            });
+          }
+        });
+
+        const ugnijezdeniPodaci = Object.values(mapKnjiznice);
+
+        const dataStr =
+          "data:text/json;charset=utf-8," +
+          encodeURIComponent(JSON.stringify(ugnijezdeniPodaci, null, 2));
+        const downloadAnchor = document.createElement("a");
+        downloadAnchor.setAttribute("href", dataStr);
+        downloadAnchor.setAttribute("download", "knjiznice_filtrirano.json");
+        document.body.appendChild(downloadAnchor);
+        downloadAnchor.click();
+        downloadAnchor.remove();
+      }
+
       window.onload = dohvatiPodatkeIzBaze;
     </script>
   </body>

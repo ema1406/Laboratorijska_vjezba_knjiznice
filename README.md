@@ -32,14 +32,14 @@ postanski_broj - poštanski broj vezan za grad koji je
 grad - grad gdje je locirana knjižnica
 zupanija - županija u kojoj se nalazi knjižnica
 telefon - kontakt broj knjižnice
-mail - kontakt mail knjižnice
+mail - kontakt email knjižnice
 web - službena stranica navedene knjižnice
 vrsta_knjiznice - u koju kategoriju spada (gradska, narodna, sveučilišna...)
 #### Odjeli:
 odjel_naziv - naziv odjela specifičan za tu knjižnicu
 #### Zaposlenici:
-ime - ime navedeno na web stranici knjižnice
-prezime - prezime navedeno na web stranici knjižnice
+ime - ime zaposlenika navedeno na web stranici knjižnice
+prezime - prezime zaposlenika navedeno na web stranici knjižnice
 radni_odnos - na kojoj poziciji je zaposlenik
 
 
