@@ -21,14 +21,14 @@ Jedan od korištenih izvora:
 https://www.knjiznica.hr/export
 ### Sadržaj skupa podataka
 Skup podataka sastoji se od tri povezane tablice:
-- **knjiznice** – sadrži osnovne podatke o knjižnicama (naziv, adresa, poštanski broj, grad, županija, telefon, web i vrsta knjižnice)
+- **knjiznice** – sadrži osnovne podatke o knjižnicama (naziv, adresa, poštanski broj, grad, županija, telefon, mail, web i vrsta knjižnice)
 - **odjeli** – sadrži podatke o tome koje odjele ima knjižnica (naziv)
 - **zaposlenici** – sadrži podatke o zaposlenicima i njihovoj povezanosti s knjižnicama (ime, prezime, radni odnos)
 ### Opis atributa
 #### Knjižnice:
 naziv - puni naziv knjižnice
 adresa - ulica i kućni broj knjižnice
-postanski_broj - poštanski broj vezan za grad koji je
+postanski_broj - poštanski broj vezan za grad u kojem je knjižnica
 grad - grad gdje je locirana knjižnica
 zupanija - županija u kojoj se nalazi knjižnica
 telefon - kontakt broj knjižnice
