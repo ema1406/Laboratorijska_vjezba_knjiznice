@@ -69,8 +69,6 @@ app.get('/api/knjiznice', async (req, res) => {
         });
     }
 });
-
-// Pokretanje poslužitelja
 app.listen(PORT, () => {
     console.log(`Stranica radi na http://localhost:${PORT}`);
 });
