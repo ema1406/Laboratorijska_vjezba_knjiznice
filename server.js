@@ -69,6 +69,7 @@ app.get('/api/knjiznice', async (req, res) => {
         });
     }
 });
+
 app.listen(PORT, () => {
     console.log(`Stranica radi na http://localhost:${PORT}`);
 });
