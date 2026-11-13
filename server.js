@@ -4,11 +4,9 @@ const express = require('express');
 const { Pool } = require('pg');
 require('dotenv').config();
 
-// Stvaranje Express aplikacije
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Povezivanje s PostgreSQL bazom
 const pool = new Pool({
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
@@ -17,10 +15,8 @@ const pool = new Pool({
     password: process.env.DB_PASSWORD
 });
 
-// Posluživanje HTML, CSS i JavaScript datoteka
 app.use(express.static('public'));
 
-// Početna API ruta za dohvaćanje knjižnica
 app.get('/api/knjiznice', async (req, res) => {
     try {
 
@@ -67,16 +63,12 @@ app.get('/api/knjiznice', async (req, res) => {
         res.json(rezultat.rows);
 
     } catch (error) {
-
         console.error('Greška pri dohvaćanju podataka:', error);
-
         res.status(500).json({
             greska: 'Greška pri dohvaćanju podataka iz baze.'
         });
     }
 });
-
-// Pokretanje poslužitelja
 app.listen(PORT, () => {
     console.log(`Stranica radi na http://localhost:${PORT}`);
 });
