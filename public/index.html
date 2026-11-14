@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Skup podataka o knjižnicama, njihovim odjelima i zaposlenicima."
+      content="Ovaj skup podataka sadrži informacije o odabranim javnim knjižnicama na području Republike Hrvatske. Podaci obuhvaćaju osnovne informacije o knjižnicama, njihovim odjelima i zaposlenicima."
     />
     <meta name="author" content="Ema Pavić" />
     <title>Skup podataka o knjižnicama</title>
 
     <style>
-     body {
-        font-family: 'Calibri', 'Segoe UI', Tahoma, sans-serif;
+      body {
+        font-family: "Calibri", "Segoe UI", Tahoma, sans-serif;
         margin: 0;
         padding: 30px;
         background-color: #e6f2ff;
@@ -95,7 +95,6 @@
         align-items: center;
       }
 
-
       .download a:hover {
         background-color: #ff6df6;
         color: #fff;
@@ -105,7 +104,7 @@
         margin-top: 25px;
         display: flex;
         flex-direction: column;
-        font-size: 17px; 
+        font-size: 17px;
       }
 
       section.metadata h2 {
@@ -141,7 +140,6 @@
         font-family: monospace;
         color: #d63384;
       }
-
     </style>
   </head>
 
@@ -156,118 +154,118 @@
     <div class="main">
       <h1>Skup podataka o knjižnicama</h1>
 
+      <article>
+        <section>
+          <h2>Opis skupa podataka</h2>
+          <p>
+            Ovaj skup podataka sadrži informacije o odabranim javnim knjižnicama
+            na području Republike Hrvatske. Podaci obuhvaćaju osnovne
+            informacije o knjižnicama, njihovim odjelima i zaposlenicima.
+          </p>
+        </section>
 
-        <article>
-          <section>
-            <h2>Opis skupa podataka</h2>
-            <p>
-              Ovaj skup podataka sadrži informacije o odabranim javnim
-              knjižnicama na području Republike Hrvatske. Podaci obuhvaćaju
-              osnovne informacije o knjižnicama, njihovim odjelima i
-              zaposlenicima.
-            </p>
+        <div class="download">
+          <h2>Preuzimanje podataka</h2>
 
-          </section>
+          <p>Podatke možete preuzeti u sljedećim formatima:</p>
 
-            <div class="download">
-                <h2>Preuzimanje podataka</h2>
+          <a href="knjiznice.json" download="knjiznice.json"> Preuzmi JSON </a>
 
-                <p>Podatke možete preuzeti u sljedećim formatima:</p>
+          <a href="knjiznice.csv" download="knjiznice.csv"> Preuzmi CSV </a>
+        </div>
 
-                <a href="knjiznice.json" download="knjiznice.json"> Preuzmi JSON </a>
+        <section class="metadata">
+          <h2>Metapodaci</h2>
 
-                <a href="knjiznice.csv" download="knjiznice.csv"> Preuzmi CSV </a>
-            </div>
+          <h3>Opis licencija</h3>
+          <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"
+            >Creative Commons CC0 1.0 Universal</a>
+            
+          <h3>Autor</h3>
+          <p>Ema Pavić</p>
 
-          <section class="metadata">
-            <h2>Metapodaci</h2>
+          <h3>Datum izrade</h3>
+          <p>30.10.2026.</p>
 
-            <h3>Opis licencija</h3>
-            <p>Licencija: Creative Commons CC0 1.0 Universal</p>
+          <h3>Verzija skupa</h3>
+          <p>Verzija: 1.0</p>
 
-            <h3>Autor</h3>
-            <p>Ema Pavić</p>
+          <h3>Jezik</h3>
+          <p>Hrvatski jezik</p>
 
-            <h3>Datum izrade</h3>
-            <p>30.10.2026.</p>
+          <h3>Izvor podataka</h3>
+          <p>
+            Podaci su prikupljeni iz javno dostupnih informacija o knjižnicama i
+            njihovim mrežnim stranicama.<br />
+            Jedan od korištenih izvora:
+            <a href="https://www.knjiznica.hr/export"
+              >https://www.knjiznica.hr/export</a
+            >
+          </p>
 
-            <h3>Verzija skupa</h3>
-            <p>Verzija: 1.0</p>
+          <h3>Sadržaj skupa podataka</h3>
+          <p>Skup podataka sastoji se od tri povezane tablice:</p>
+          <ul>
+            <li>
+              <code>knjiznice</code> - sadrži osnovne podatke o knjižnicama
+              (naziv, adresa, poštanski broj, grad, županija, telefon, mail, web
+              i vrsta knjižnice)
+            </li>
+            <li>
+              <code>odjeli</code> - sadrži podatke o tome koje odjele ima
+              knjižnica (naziv)
+            </li>
+            <li>
+              <code>zaposlenici</code> - sadrži podatke o zaposlenicima i
+              njihovoj povezanosti s knjižnicama (ime, prezime, radni odnos)
+            </li>
+          </ul>
 
-            <h3>Jezik</h3>
-            <p>Hrvatski jezik</p>
+          <h3>Opis atributa</h3>
+          <p>
+            Svaki atribut u skupu podataka ima određen značaj i koristi se za
+            identifikaciju i opisivanje određenih karakteristika knjižnica,
+            odjela i zaposlenika.
+          </p>
+          <h4>Knjižnice:</h4>
+          <p>
+            <strong>naziv:</strong> puni naziv knjižnice<br />
+            <strong>adresa:</strong> ulica i kućni broj knjižnice<br />
+            <strong>postanski_broj:</strong> poštanski broj vezan za grad koji
+            je<br />
+            <strong>grad:</strong> grad gdje je locirana knjižnica<br />
+            <strong>zupanija:</strong> županija u kojoj se nalazi knjižnica<br />
+          </p>
+          <p>
+            <strong>telefon:</strong> kontakt broj knjižnice<br />
+            <strong>mail:</strong> kontakt mail knjižnice<br />
+            <strong>web:</strong> službena stranica navedene knjižnice<br />
+          </p>
+          <p>
+            <strong>vrsta_knjiznice:</strong> u koju kategoriju spada (gradska,
+            narodna, sveučilišna...)<br />
+          </p>
+          <h4>Odjeli:</h4>
+          <p>
+            <strong>odjel_naziv:</strong> naziv odjela specifičan za tu
+            knjižnicu<br />
+          </p>
+          <h4>Zaposlenici:</h4>
+          <p>
+            <strong>ime:</strong> ime navedeno na web stranici knjižnice<br />
+            <strong>prezime:</strong> prezime navedeno na web stranici
+            knjižnice<br />
+            <strong>radni_odnos:</strong> na kojoj poziciji je zaposlenik<br />
+          </p>
 
-            <h3>Izvor podataka</h3>
-            <p>
-              Podaci su prikupljeni iz javno dostupnih informacija o knjižnicama
-              i njihovim mrežnim stranicama.<br />
-              Jedan od korištenih izvora:
-              <a
-                href="https://www.knjiznica.hr/export"
-                >https://www.knjiznica.hr/export</a
-              >
-            </p>
-
-            <h3>Sadržaj skupa podataka</h3>
-            <p>Skup podataka sastoji se od tri povezane tablice:</p>
-            <ul>
-              <li>
-                <code>knjiznice</code> - sadrži osnovne podatke o knjižnicama
-                (naziv, adresa, poštanski broj, grad, županija, telefon, mail, web i
-                vrsta knjižnice)
-              </li>
-              <li>
-                <code>odjeli</code> - sadrži podatke o tome koje odjele ima
-                knjižnica (naziv)
-              </li>
-              <li>
-                <code>zaposlenici</code> - sadrži podatke o zaposlenicima i
-                njihovoj povezanosti s knjižnicama (ime, prezime, radni odnos)
-              </li>
-            </ul>
-
-            <h3>Opis atributa</h3>
-            <p>
-              Svaki atribut u skupu podataka ima određen značaj i koristi se za
-              identifikaciju i opisivanje određenih karakteristika knjižnica,
-              odjela i zaposlenika.
-            </p>
-            <h4>Knjižnice:</h4>
-            <p>
-              <strong>naziv:</strong> puni naziv knjižnice<br />
-              <strong>adresa:</strong> ulica i kućni broj knjižnice<br />
-              <strong>postanski_broj:</strong> poštanski broj vezan za grad koji je<br />
-              <strong>grad:</strong> grad gdje je locirana knjižnica<br />
-              <strong>zupanija:</strong> županija u kojoj se nalazi knjižnica<br />
-            </p>
-            <p>
-              <strong>telefon:</strong> kontakt broj knjižnice<br />
-              <strong>mail:</strong> kontakt mail knjižnice<br />
-              <strong>web:</strong> službena stranica navedene knjižnice<br />
-            </p>
-            <p>
-              <strong>vrsta_knjiznice:</strong> u koju kategoriju spada (gradska, narodna, sveučilišna...)<br />
-            </p>
-            <h4>Odjeli:</h4>
-            <p>
-              <strong>odjel_naziv:</strong> naziv odjela specifičan za tu knjižnicu<br />
-            </p>
-            <h4>Zaposlenici:</h4>
-            <p>
-              <strong>ime:</strong> ime navedeno na web stranici knjižnice<br />
-              <strong>prezime:</strong> prezime navedeno na web stranici knjižnice<br />
-              <strong>radni_odnos:</strong> na kojoj poziciji je zaposlenik<br />
-            </p>
-
-            <h3>Formati podataka</h3>
-            <ul>
-              <li>CSV</li>
-              <li>JSON</li>
-              <li>SQL</li>
-            </ul>
-          </section>
-        </article>
-
+          <h3>Formati podataka</h3>
+          <ul>
+            <li>CSV</li>
+            <li>JSON</li>
+            <li>SQL</li>
+          </ul>
+        </section>
+      </article>
     </div>
   </body>
 </html>

@@ -1,5 +1,3 @@
-
-// Učitavanje potrebnih biblioteka
 const express = require('express');
 const { Pool } = require('pg');
 require('dotenv').config();
