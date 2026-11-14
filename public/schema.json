@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://github.com/ema1406/Laboratorijska_vjezba_knjiznice/blob/main/schema.json",
+    "$id": "https://raw.githubusercontent.com/ema1406/Laboratorijska_vjezba_knjiznice/main/schema.json",
     "title": "Knjiznice Schema",
     "description": "Ovaj skup podataka sadrži informacije o odabranim javnim knjižnicama na području Republike Hrvatske. Podaci obuhvaćaju osnovne informacije o knjižnicama, njihovim odjelima i zaposlenicima.",
     "type": "array",
@@ -70,7 +70,7 @@
                                 "null"
                             ],
                             "title": "Naziv odjela",
-                            "description": "naziv odjela specifičan za tu knjižnice"
+                            "description": "naziv odjela specifičan za tu knjižnicu"
                         }
                     },
                     "required": [
